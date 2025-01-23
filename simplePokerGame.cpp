@@ -152,19 +152,25 @@ int main() {
         else{
         dealerTotal = dealerTurn(dealerTotal);
         determineWinner(playerTotal, dealerTotal);
-        // add a flag in determine winner to iterate wins or do it within determine winner
-        // just add logic for tie win lose in the determine winner function
         }
         cout << "Play again? \n";
 
 
         getline(cin, response);
-//will ask if you would like to play
+        
+        //will ask if you would like to play
         if (response == "No" ){
             play = false;
         }
         else if (response == "Yes" ){
             play = true;
+        }
+        else if (response == "yes" ){
+            play = true;
+        
+        }
+        else if (response == "no" ){
+            play = false;
         }
         else {
             cout<<"Invalid input";
